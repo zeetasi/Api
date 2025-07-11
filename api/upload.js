@@ -19,7 +19,7 @@ app.post('/api/upload', upload.single('imageUpload'), async (req, res) => {
 
     try {
         const blob = await put(filename, fileBuffer, {
-            access: 'zeetasi', 
+            access: 'public', 
             contentType: req.file.mimetype
         });
 
