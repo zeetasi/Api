@@ -19,12 +19,12 @@ app.post('/api/upload', upload.single('imageUpload'), async (req, res) => {
 
     try {
         const blob = await put(filename, fileBuffer, {
-            access: 'public', 
+            access: 'zeetasi', 
             contentType: req.file.mimetype
         });
 
         res.status(200).json({
-            message: 'Gambar berhasil diunggah!',
+            message: 'Gambar berhasil by zeetasi',
             url: blob.url 
         });
 
